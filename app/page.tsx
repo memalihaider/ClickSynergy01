@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { 
   ArrowRight, 
   BarChart3, 
@@ -15,7 +16,10 @@ import {
   Smartphone,
   Search,
   Share2,
-  Palette
+  Palette,
+  FileText,
+  ChevronDown,
+  ChevronUp
 } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import PremiumCard from "@/components/PremiumCard";
@@ -38,7 +42,40 @@ const services = [
   { title: "Brand Strategy", icon: ShieldCheck, desc: "Expert guidance to position your brand for success." },
 ];
 
+const faqs = [
+  {
+    question: "What services does Click Synergy offer?",
+    answer: "We offer comprehensive digital marketing and web development services including SEO optimization, social media marketing, web design and development, PPC advertising, content creation, and brand strategy consulting."
+  },
+  {
+    question: "How long does it take to see results from digital marketing?",
+    answer: "Results vary depending on your industry, competition, and goals. SEO typically shows results in 3-6 months, while PPC campaigns can show immediate results. We provide detailed timelines and milestones for each project."
+  },
+  {
+    question: "Do you work with businesses outside the UAE?",
+    answer: "Yes, we work with clients globally. Our team has experience serving businesses in various countries and can adapt our strategies to different markets and cultural contexts."
+  },
+  {
+    question: "What is your typical project timeline?",
+    answer: "Project timelines vary based on scope and complexity. A basic website might take 2-4 weeks, while comprehensive digital marketing campaigns can span 3-12 months. We'll provide a detailed timeline during our initial consultation."
+  },
+  {
+    question: "How do you measure campaign success?",
+    answer: "We use industry-standard KPIs including ROI, conversion rates, traffic growth, engagement metrics, and brand awareness indicators. We provide detailed monthly reports and adjust strategies based on performance data."
+  },
+  {
+    question: "What makes Click Synergy different from other agencies?",
+    answer: "Our unique blend of creative excellence, technical expertise, and data-driven strategies sets us apart. We focus on long-term partnerships rather than one-off projects, ensuring sustainable growth for your business."
+  }
+];
+
 export default function Home() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -78,6 +115,15 @@ export default function Home() {
               >
                 Explore Services
               </Link>
+              <a
+                href="https://theclicksynergy.com/wp-content/uploads/2025/02/Click-Synergy-Profile.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all duration-500 flex items-center justify-center text-sm md:text-base"
+              >
+                <FileText className="mr-2" size={18} />
+                Company Profile
+              </a>
             </div>
           </motion.div>
         </div>
@@ -201,6 +247,69 @@ export default function Home() {
               className="w-full sm:w-auto px-8 py-4 md:px-12 md:py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all duration-500 inline-block text-sm md:text-base"
             >
               View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 md:py-32 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6">
+          <SectionHeader 
+            title="Frequently Asked Questions" 
+            subtitle="Everything You Need to Know" 
+          />
+          
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="glass border border-white/5 rounded-[20px] md:rounded-[30px] overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleFaq(index)}
+                  className="w-full px-6 md:px-8 py-6 md:py-8 text-left flex items-center justify-between hover:bg-white/5 transition-colors group"
+                >
+                  <h3 className="text-lg md:text-xl font-semibold text-white pr-4 group-hover:text-gold transition-colors">
+                    {faq.question}
+                  </h3>
+                  <div className="flex-shrink-0">
+                    {openFaq === index ? (
+                      <ChevronUp className="w-5 h-5 md:w-6 md:h-6 text-gold" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-gold transition-colors" />
+                    )}
+                  </div>
+                </button>
+                
+                <motion.div
+                  initial={false}
+                  animate={{ height: openFaq === index ? "auto" : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-6 md:px-8 pb-6 md:pb-8">
+                    <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12 md:mt-16">
+            <p className="text-gray-400 mb-6">Still have questions?</p>
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 inline-flex items-center justify-center glow-gold text-sm md:text-base"
+            >
+              Contact Us
+              <ArrowRight className="ml-2" />
             </Link>
           </div>
         </div>
