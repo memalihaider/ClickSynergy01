@@ -18,20 +18,20 @@ export default function PremiumCard({ title, description, icon: Icon, index }: P
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -10 }}
-      className="group relative p-8 rounded-3xl glass-gold hover:bg-gold/10 transition-all duration-500"
+      className="group relative p-6 md:p-8 rounded-3xl glass-gold hover:bg-gold/10 transition-all duration-500"
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"></div>
       
       <div className="relative z-10">
-        <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-8 group-hover:scale-110 group-hover:bg-gold group-hover:text-black transition-all duration-500">
-          <Icon size={32} />
+        <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold mb-6 md:mb-8 group-hover:scale-110 group-hover:bg-gold group-hover:text-black transition-all duration-500">
+          <Icon className="w-6 h-6 md:w-8 md:h-8" />
         </div>
         
-        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gold transition-colors">
+        <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-gold transition-colors">
           {title}
         </h3>
         
-        <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+        <p className="text-sm md:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
           {description}
         </p>
         

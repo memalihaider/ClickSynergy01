@@ -34,17 +34,17 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3 group">
-          <div className="relative w-12 h-12 flex items-center justify-center">
+        <Link href="/" className="flex items-center space-x-2 md:space-x-3 group">
+          <div className="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
             <div className="absolute inset-0 bg-gold rounded-full rotate-45 group-hover:rotate-90 transition-transform duration-500 opacity-20"></div>
             <div className="absolute inset-0 border border-gold/50 rounded-full rotate-45 group-hover:rotate-90 transition-transform duration-500"></div>
             <img
               src="/WhatsApp Image 2025-12-18 at 19.52.28.jpeg"
               alt="Clicks Synergy Logo"
-              className="w-10 h-10 rounded-full object-cover relative z-10 border-2 border-gold/30"
+              className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover relative z-10 border-2 border-gold/30"
             />
           </div>
-          <span className="text-2xl font-bold tracking-tighter text-gradient-gold">
+          <span className="text-lg md:text-2xl font-bold tracking-tighter text-gradient-gold whitespace-nowrap">
             CLICKS SYNERGY
           </span>
         </Link>

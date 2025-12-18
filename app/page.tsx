@@ -53,28 +53,28 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block py-2 px-6 rounded-full glass-gold text-gold text-xs font-bold tracking-[0.3em] uppercase mb-8">
+            <span className="inline-block py-2 px-4 md:px-6 rounded-full glass-gold text-gold text-[10px] md:text-xs font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-6 md:mb-8">
               The Future of Digital Growth
             </span>
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-8 leading-[0.9]">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6 md:mb-8 leading-[1.1] md:leading-[0.9]">
               <span className="text-white">ELEVATE YOUR</span><br />
               <span className="text-gradient-gold">DIGITAL SYNERGY</span>
             </h1>
-            <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-gray-400 text-base md:text-xl max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
               We blend cutting-edge technology with creative brilliance to transform your business into a global digital powerhouse.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
               <Link
                 href="/contact"
-                className="group px-10 py-5 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 flex items-center glow-gold"
+                className="w-full sm:w-auto group px-8 py-4 md:px-10 md:py-5 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 flex items-center justify-center glow-gold text-sm md:text-base"
               >
                 Start Your Journey
                 <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
               </Link>
               <Link
                 href="/services"
-                className="px-10 py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all duration-500"
+                className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all duration-500 text-center text-sm md:text-base"
               >
                 Explore Services
               </Link>
@@ -95,9 +95,9 @@ export default function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -106,46 +106,46 @@ export default function Home() {
               className="relative"
             >
               <div className="absolute -top-20 -left-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
-              <div className="relative z-10 glass-gold p-2 rounded-[40px]">
-                <div className="bg-black rounded-[38px] overflow-hidden aspect-square flex items-center justify-center p-12">
+              <div className="relative z-10 glass-gold p-2 rounded-[30px] md:rounded-[40px]">
+                <div className="bg-black rounded-[28px] md:rounded-[38px] overflow-hidden aspect-square flex items-center justify-center p-8 md:p-12">
                   <div className="relative w-full h-full">
                     <div className="absolute inset-0 border-2 border-gold/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
                     <div className="absolute inset-4 border border-gold/10 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-8xl font-bold text-gradient-gold">CS</span>
+                      <span className="text-6xl md:text-8xl font-bold text-gradient-gold">CS</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-10 -right-10 glass p-8 rounded-3xl glow-gold animate-float">
-                <div className="text-4xl font-bold text-white mb-1">10+</div>
-                <div className="text-xs tracking-widest uppercase text-gold font-bold">Years Excellence</div>
+              <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 glass p-4 md:p-8 rounded-2xl md:rounded-3xl glow-gold animate-float">
+                <div className="text-2xl md:text-4xl font-bold text-white mb-1">10+</div>
+                <div className="text-[10px] md:text-xs tracking-widest uppercase text-gold font-bold">Years Excellence</div>
               </div>
             </motion.div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <SectionHeader 
                 title="Redefining Digital Excellence" 
                 subtitle="Who We Are" 
                 align="left" 
               />
-              <p className="text-gray-400 text-lg leading-relaxed">
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed">
                 At Click Synergy, we specialize in customized solutions and Digital Marketing Services, emphasizing flexibility, quality, and commitment. Our expertise lies in understanding client needs, devising effective business strategies, and delivering clear vision with measurable results.
               </p>
-              <div className="grid grid-cols-2 gap-8 pt-8">
+              <div className="grid grid-cols-2 gap-6 md:gap-8 pt-4 md:pt-8">
                 <div>
-                  <h4 className="text-white font-bold text-3xl mb-2">500+</h4>
-                  <p className="text-gray-500 text-sm tracking-widest uppercase">Projects Delivered</p>
+                  <h4 className="text-white font-bold text-2xl md:text-3xl mb-1 md:mb-2">500+</h4>
+                  <p className="text-gray-500 text-[10px] md:text-sm tracking-widest uppercase">Projects Delivered</p>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-3xl mb-2">98%</h4>
-                  <p className="text-gray-500 text-sm tracking-widest uppercase">Client Satisfaction</p>
+                  <h4 className="text-white font-bold text-2xl md:text-3xl mb-1 md:mb-2">98%</h4>
+                  <p className="text-gray-500 text-[10px] md:text-sm tracking-widest uppercase">Client Satisfaction</p>
                 </div>
               </div>
-              <div className="pt-8">
+              <div className="pt-4 md:pt-8">
                 <Link
                   href="/about"
-                  className="inline-flex items-center text-gold font-bold tracking-widest uppercase text-sm group"
+                  className="inline-flex items-center text-gold font-bold tracking-widest uppercase text-xs md:text-sm group"
                 >
                   Learn More About Us
                   <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
@@ -157,13 +157,13 @@ export default function Home() {
       </section>
 
       {/* Objectives Section */}
-      <section className="py-32 bg-zinc-950/50 relative">
+      <section className="py-20 md:py-32 bg-zinc-950/50 relative">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader 
             title="Our Strategic Vision" 
             subtitle="Objectives" 
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {objectives.map((obj, i) => (
               <PremiumCard 
                 key={i}
@@ -178,13 +178,13 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-32 relative">
+      <section className="py-20 md:py-32 relative">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader 
             title="Cutting-Edge Solutions" 
             subtitle="Our Services" 
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, i) => (
               <PremiumCard 
                 key={i}
@@ -195,10 +195,10 @@ export default function Home() {
               />
             ))}
           </div>
-          <div className="mt-20 text-center">
+          <div className="mt-12 md:mt-20 text-center">
             <Link
               href="/services"
-              className="px-12 py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all duration-500 inline-block"
+              className="w-full sm:w-auto px-8 py-4 md:px-12 md:py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all duration-500 inline-block text-sm md:text-base"
             >
               View All Services
             </Link>
@@ -207,20 +207,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gold/5"></div>
         <div className="max-w-5xl mx-auto px-6 relative z-10">
-          <div className="glass-gold p-16 rounded-[40px] text-center border border-gold/20">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tighter">
-              READY TO SCALE YOUR <br />
+          <div className="glass-gold p-8 md:p-16 rounded-[30px] md:rounded-[40px] text-center border border-gold/20">
+            <h2 className="text-3xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-tighter leading-tight">
+              READY TO SCALE YOUR <br className="hidden md:block" />
               <span className="text-gradient-gold">DIGITAL PRESENCE?</span>
             </h2>
-            <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base md:text-lg mb-8 md:mb-12 max-w-2xl mx-auto">
               Join hundreds of successful brands that have transformed their business with Click Synergy. Let's build something extraordinary together.
             </p>
             <Link
               href="/contact"
-              className="px-12 py-6 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 inline-flex items-center glow-gold"
+              className="w-full sm:w-auto px-8 py-4 md:px-12 md:py-6 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 inline-flex items-center justify-center glow-gold text-sm md:text-base"
             >
               Get Free Consultation
               <ArrowRight className="ml-2" />
