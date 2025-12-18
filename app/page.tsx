@@ -104,24 +104,18 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
               <Link
                 href="/contact"
-                className="w-full sm:w-auto group px-8 py-4 md:px-10 md:py-5 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 flex items-center justify-center glow-gold text-sm md:text-base"
+                className="w-full sm:w-auto group px-6 py-3 md:px-8 md:py-4 bg-gold text-black font-bold tracking-widest uppercase rounded-full hover:bg-gold-light transition-all duration-500 flex items-center justify-center glow-gold text-sm md:text-base"
               >
                 Start Your Journey
                 <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
-              </Link>
-              <Link
-                href="/services"
-                className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-white/10 transition-all duration-500 text-center text-sm md:text-base"
-              >
-                Explore Services
               </Link>
               <a
                 href="https://theclicksynergy.com/wp-content/uploads/2025/02/Click-Synergy-Profile.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all duration-500 flex items-center justify-center text-sm md:text-base"
+                className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 glass text-white font-bold tracking-widest uppercase rounded-full hover:bg-gold hover:text-black transition-all duration-500 flex items-center justify-center text-sm md:text-base"
               >
-                <FileText className="mr-2" size={18} />
+                <FileText className="mr-2" size={16} />
                 Company Profile
               </a>
             </div>
